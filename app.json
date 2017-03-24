@@ -1,0 +1,40 @@
+{
+  "debug": true,
+  "pages": [
+    "pages/map/map",
+    "pages/reservation/reservation",
+    "pages/startPage/startPage",
+    "pages/project/detail/detail",
+    "pages/company/detail/detail",
+    "pages/company/list/list",
+    "pages/slideDelete/slideDelete",
+    "pages/chooseImage/chooseImage",
+    "pages/mart/mart",
+    "pages/project/list/list",
+    "pages/login/login"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#00BFD1"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#00BFD1",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/company/detail/detail",
+        "text": "公司",
+        "iconPath": "image/company.png",
+        "selectedIconPath": "image/company-light.png"
+      },
+      {
+        "pagePath": "pages/project/list/list",
+        "text": "项目",
+        "iconPath": "image/project.png",
+        "selectedIconPath": "image/project-light.png"
+
+      }
+    ]
+  }
+}

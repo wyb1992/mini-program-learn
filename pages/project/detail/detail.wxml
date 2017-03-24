@@ -1,0 +1,82 @@
+<view class="body">
+    <scroll-view scroll-y="{{true}}" style="height: {{windowHeight}}px;" lower-threshold="100"
+                 bindscrolltolower="lower">
+        <view class="head">
+            <view class="project">
+                <view class="project-info">
+                    <text class="stage">{{projectDetail.stage}}</text>
+                    <text class="projectName">{{projectDetail.projectName}}</text>
+                </view>
+                <view class="address-info">
+                    <text class="p">{{projectDetail.city}}</text>
+                    <text class="p">{{projectDetail.address}}</text>
+                </view>
+                <view class="count-info">
+                    <text class="p">浏览:{{projectDetail.pageViewCount}}</text>
+                    <text class="p">点赞:{{projectDetail.praiseNum}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="follow-detail">
+            <view class="list">
+                <scroll-view class="follow_scroll_x_box" scroll-x="{{true}}">
+                    <view class="follow-list" wx:for="{{followList.followList}}" wx:key="unique"
+                          wx:for-item="followList">
+                        <image class="follow-img"
+                               src="{{followList.imgOssUrl != '' ? followList.imgOssUrl : followList.img}}"></image>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="desc">
+                <text class="p">滑动查看</text>
+                <text class="number" wx-if="{{followList.count > 0}}">{{followList.count}}位粉丝</text>
+            </view>
+        </view>
+
+        <view class="eventList" wx:for="{{eventList}}" wx:key="unique" wx:for-item="event" scroll-y="true">
+            <view class="icon">
+                <image src="{{event.imgUrlOssUrl != '' ? event.imgUrlOssUrl : event.wxImgUrl}}">{{event.taskId}}
+                </image>
+            </view>
+            <view class="comment-detail">
+                <view class="comment-person">{{event.nickName}}
+                    <text class="role">{{event.roleName}}</text>
+                </view>
+                <view>
+                    <text class="event-time">{{event.eventTime}}</text>
+                    <text class="event-context">{{event.eventContext}}</text>
+                </view>
+                <view class="photoList" wx:for="{{event.photoListOssUrl}}" wx:key="unique" wx:for-item="photo">
+                    <view wx:if="{{event.photoList.length <= 1}}" class="photo-1">
+                        <image class="image-1"
+                               src="{{photo}}?x-oss-process=image/resize,limit_0,m_fill,h_300,w_300/auto-orient,1/quality,q_90/format,gif"></image>
+                    </view>
+                    <view wx:else="{{event.photoList.length > 1}}" class="photo">
+                        <image class="image"
+                               src="{{photo}}?x-oss-process=image/resize,limit_0,m_fill,h_300,w_300/auto-orient,1/quality,q_90/format,gif"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="comment">
+                <view class="praise-comment" wx:for="{{event.commentList}}" wx:key="unique" wx:for-item="comment">
+                    <a>
+                        <text class="nick-name">{{comment.nickName}}</text>
+                        <text class="role-name">{{comment.roleName}}</text>
+                        <div> :</div>
+                        <text class="comment-text">{{comment.commentText}}</text>
+                    </a>
+                </view>
+            </view>
+        </view>
+        <view class="last-page" wx:if="{{isLastPage}}">
+            ----------- 已经到底了，别扯了 -----------
+        </view>
+    </scroll-view>
+</view>
+
+<view wx:if="{{loading}}" class="loading_box">
+    <view class="loading3 loading3_1"></view>
+    <view class="loading3 loading3_2"></view>
+    <view class="loading3 loading3_3"></view>
+</view>
+

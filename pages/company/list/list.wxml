@@ -1,0 +1,12 @@
+<view wx:for="{{companyList}}" wx:key="unique" wx:for-item="companyInfo">
+    <view class="companyInfo" data-company-Id="{{companyInfo.companyId}}" bindtap="navigate">
+        <image class="logo"
+               src="{{companyInfo.logoOssUrl}}?x-oss-process=image/resize,limit_0,m_fill,h_140,w_140/auto-orient,1/quality,q_90/format,gif"></image>
+        <view class="name">
+            <text>{{companyInfo.companyName}}</text>
+            <image class="arrow" src="../../../image/company/arrow.png">
+            </image>
+        </view>
+    </view>
+</view>
+

@@ -1,0 +1,45 @@
+<view>
+    <view class="companyInfo">
+        <image class="logo" src="{{companyInfo.logoOssUrl}}"></image>
+        <view class="name">{{companyInfo.companyName}}</view>
+        <view class="address">{{companyInfo.companyAddress}}</view>
+        <view class="phoneNo">{{companyInfo.phoneNo}}</view>
+        <view class="toHome">进入微店首页</view>
+
+    </view>
+    <view class="column">
+        <view class="data">
+            <view>
+                <text class="viewNum">浏览量</text>
+                <text class="unReadNum">+{{unReadNum}}</text>
+            </view>
+            <text class="number">{{countNum}}</text>
+        </view>
+        <view class="data">
+            <text class="text">客户预约</text>
+            <text class="number">{{countType2.countNum}}</text>
+        </view>
+        <view class="data">
+            <text class="text">在建工地</text>
+            <text class="number">{{countType3.countNum}}</text>
+        </view>
+        <view class="data">
+            <text class="text">完工项目</text>
+            <text class="number">{{countType4.countNum}}</text>
+        </view>
+    </view>
+    <view class="functionAre">
+        <view class="area" wx:for="{{functionArea}}" wx:key="unique" wx:for-item="item" bindtap="{{item.goto}}">
+            <image src="{{item.url}}"></image>
+            <text class="p">{{item.name}}</text>
+        </view>
+    </view>
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+        <block wx:for="{{imgUrls}}"  wx:key="unique">
+            <swiper-item>
+                <image class="image" src="{{item.beImgOssUrl}}?x-oss-process=image/resize,limit_0,m_fill,w_750,h_140/auto-orient,1/quality,q_90/format,gif"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
