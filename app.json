@@ -5,6 +5,9 @@
     "pages/component/pages/view/view",
     "pages/component/pages/scroll-view/scroll-view",
     "pages/component/pages/swiper/swiper",
+    "pages/component/pages/icon/icon",
+    "pages/component/pages/text/text",
+    "pages/component/pages/progress/progress",
 
     "pages/interface/index"
   ],
