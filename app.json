@@ -12,16 +12,16 @@
     "pages/interface/index"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTextStyle": "white",
-    "backgroundColor": "#fff",
-    "backgroundTextStyle": "light"
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "演示",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
-    "color": "#000",
-    "selectedColor": "#000",
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
     "borderStyle": "black",
-    "backgroundColor": "#fff",
+    "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/component/index",
