@@ -2,6 +2,7 @@
   "debug": true,
   "pages": [
     "pages/component/index",
+
     "pages/component/pages/view/view",
     "pages/component/pages/scroll-view/scroll-view",
     "pages/component/pages/swiper/swiper",

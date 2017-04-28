@@ -109,7 +109,7 @@ form {
 }
 
 .page-foot {
-    margin: 100rpx 0 30rpx 0;
+    margin: 30rpx 0;
     text-align: center;
     color: #1aad19;
     font-size: 0;
