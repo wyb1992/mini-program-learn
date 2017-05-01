@@ -11,8 +11,13 @@ Page({
             name: '基础内容',
             open: false,
             pages: ['icon', 'text', 'progress']
-        }
-        ]
+        },
+        {
+            id: 'form',
+            name: '表单组件',
+            open: false,
+            pages: ['button', 'checkbox', 'form', 'input', 'label', 'picker', 'radio', 'slider', 'switch', 'textarea']
+        }]
     },
     toggle: function (e) {
         var id = e.currentTarget.id, list = this.data.list;
