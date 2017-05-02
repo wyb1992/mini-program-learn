@@ -9,6 +9,9 @@
     "pages/component/pages/icon/icon",
     "pages/component/pages/text/text",
     "pages/component/pages/progress/progress",
+    "pages/component/pages/button/button",
+    "pages/component/pages/checkbox/checkbox",
+    "pages/component/pages/form/form",
 
     "pages/interface/index"
   ],
