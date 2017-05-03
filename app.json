@@ -12,6 +12,13 @@
     "pages/component/pages/button/button",
     "pages/component/pages/checkbox/checkbox",
     "pages/component/pages/form/form",
+    "pages/component/pages/input/input",
+    "pages/component/pages/label/label",
+    "pages/component/pages/picker/picker",
+    "pages/component/pages/radio/radio",
+    "pages/component/pages/slider/slider",
+    "pages/component/pages/switch/switch",
+    "pages/component/pages/textarea/textarea",
 
     "pages/interface/index"
   ],
